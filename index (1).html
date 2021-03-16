@@ -1,0 +1,62 @@
+<!DOCTYPE HTML>
+<!DOCTYPE html>
+<html>
+<head>
+
+  <meta charset="utf-8">
+ 
+  <style>
+    body{
+      font-family: arial, sans-serif;
+      font-size: 40px;
+      background-color: #CED8F6;
+    }
+    h1{
+      font-family: arial, sans-serif;
+      padding-top: 25px;
+      margin: 10px 15px 10px 0px;
+    }
+    script{
+      height: 100px;
+    }
+    /* Image Designing Propoerties */
+   /* .thumb {
+
+        height: 95px;
+        border: 1px solid #000;
+        margin: 10px 5px 0 0;
+    }*/
+    #design{
+      height: 100px; 
+    }
+    br{
+      height: 100px;
+      width: 100px;
+    }
+</style>
+
+</head>
+
+<body style="text-align: center;">
+  <h2>Choose File Here</h2>
+  <h3>Code to show various elements of the image</h3>
+    <script type="text/javascript" id="design">
+    
+window.addEventListener('load', function() {
+  document.querySelector('input[type="file"]').addEventListener('change', function() {
+      if (this.files && this.files[0]) {
+          var img = document.querySelector('img');
+          img.onload = () => {
+              URL.revokeObjectURL(img.src);  // no longer needed, free memory
+          }
+
+          img.src = URL.createObjectURL(this.files[0]); // set src to blob url
+      }
+  });
+});
+</script>
+
+<input type='file' />
+</br><img id="myImg" src="#" alt="your image" height=400 width=400>
+</body>
+</html>
