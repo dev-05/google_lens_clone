@@ -7,7 +7,8 @@ from tensorflow.keras.models import load_model
 
 
 
-model=tensorflow.keras.models.load_model('mymodel.h5')
+# model=tensorflow.keras.models.load_model('mymodel.h5')
+model=VGG16()
 print("model is loaded\n")
 
 
