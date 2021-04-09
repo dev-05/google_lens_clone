@@ -6,7 +6,7 @@ from tensorflow.keras.applications.vgg16 import preprocess_input , decode_predic
 from tensorflow.keras.models import load_model
 
 
-
+#loading the saved model also works well instead of creating a new instance 
 # model=tensorflow.keras.models.load_model('mymodel.h5')
 model=VGG16()
 print("model is loaded\n")
